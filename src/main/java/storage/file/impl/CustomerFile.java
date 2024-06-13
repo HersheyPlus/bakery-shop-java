@@ -1,8 +1,8 @@
-package storage.impl;
+package storage.file.impl;
 
-import storage.Storage;
+import storage.file.FileStorage;
 
-public class CustomerFile implements Storage {
+public class CustomerFile implements FileStorage {
     @Override
     public void loadData() {
 

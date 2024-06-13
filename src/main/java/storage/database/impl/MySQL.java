@@ -1,7 +1,7 @@
-package database.impl;
+package storage.database.impl;
 
 
-import database.DatabaseStorage;
+import storage.database.DatabaseStorage;
 
 public class MySQL implements DatabaseStorage {
     @Override
@@ -11,6 +11,16 @@ public class MySQL implements DatabaseStorage {
 
     @Override
     public void saveData() {
+
+    }
+
+    @Override
+    public void updateData() {
+
+    }
+
+    @Override
+    public void removeData() {
 
     }
 

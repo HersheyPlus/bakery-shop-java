@@ -1,7 +1,8 @@
-package database.impl;
-import database.DatabaseStorage;
+package storage.file.impl;
 
-public class PostgresQL implements DatabaseStorage {
+import storage.file.FileStorage;
+
+public class AdminFile implements FileStorage {
     @Override
     public void loadData() {
 

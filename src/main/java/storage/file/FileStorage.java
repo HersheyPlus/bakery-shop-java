@@ -1,6 +1,6 @@
-package storage;
+package storage.file;
 
-public interface Storage {
+public interface FileStorage {
     public void loadData();
     public void saveData();
     public void clearData();
