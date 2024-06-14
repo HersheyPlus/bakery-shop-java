@@ -13,10 +13,9 @@ public class Order {
     private final String shopOrderDetail;
     private final Customer customerOrderDetail;
 
-    public Order(String orderId, LocalDateTime orderDate, String orderBakeryDetail, int orderAmount,
-                 double orderTotalPrice, String orderStatus, String orderPaymentMethod, String shopOrderDetail, Customer customerOrderDetail) {
+    public Order(String orderId, String orderBakeryDetail, int orderAmount, double orderTotalPrice, String orderStatus, String orderPaymentMethod, String shopOrderDetail, Customer customerOrderDetail) {
         this.orderId = orderId;
-        this.orderDate = orderDate;
+        this.orderDate = LocalDateTime.now();
         this.orderBakeryDetail = orderBakeryDetail;
         this.orderAmount = orderAmount;
         this.orderTotalPrice = orderTotalPrice;
@@ -25,9 +24,9 @@ public class Order {
         this.shopOrderDetail = shopOrderDetail;
         this.customerOrderDetail = customerOrderDetail;
     }
-    public Order(LocalDateTime orderDate, String orderBakeryDetail, int orderAmount, double orderTotalPrice,
-                 String orderStatus, String orderPaymentMethod, String shopOrderDetail, Customer customerOrderDetail) {
-        this(generateOrderId(), orderDate, orderBakeryDetail, orderAmount, orderTotalPrice, orderStatus, orderPaymentMethod, shopOrderDetail, customerOrderDetail);
+    
+    public Order(LocalDateTime orderDate, String orderBakeryDetail, int orderAmount, double orderTotalPrice, String orderStatus, String orderPaymentMethod, String shopOrderDetail, Customer customerOrderDetail) {
+        this(generateOrderId(), orderBakeryDetail, orderAmount, orderTotalPrice, orderStatus, orderPaymentMethod, shopOrderDetail, customerOrderDetail);
     }
 
     @Override

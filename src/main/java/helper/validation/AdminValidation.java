@@ -1,3 +1,3 @@
-package validation;
+package helper.validation;
 
 public class AdminValidation {}
